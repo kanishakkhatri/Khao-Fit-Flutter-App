@@ -17,9 +17,9 @@ class _BMICalculatorState extends State<BMICalculator>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(10, 15, 30, 1.0),
+      backgroundColor: Color.fromARGB(255, 165, 249, 158),
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(10, 15, 30, 1.0),
+        backgroundColor: Color.fromARGB(255, 8, 125, 51),
         title: Text(
           "BMI Calculator",
         ),
@@ -44,12 +44,12 @@ class _BMICalculatorState extends State<BMICalculator>
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.male,
                               size: 100.0,
-                              color: Colors.white,
+                              color: Colors.blue,
                             ),
-                            const SizedBox(height: 15.0,),
+                            SizedBox(height: 15.0,),
                             Text(
                               "MALE",
                               style: TextStyle(
@@ -61,12 +61,12 @@ class _BMICalculatorState extends State<BMICalculator>
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0,),
-                          color: isMale? Colors.blue : Color.fromARGB(255, 16, 19, 35),
+                          color: isMale? Color.fromARGB(255, 119, 194, 255): Color.fromARGB(255, 3, 191, 10) ,
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(width: 20.0,),
+                  SizedBox(width: 20.0,),
                   Expanded(
                     child: GestureDetector(
                       onTap: (){
@@ -81,7 +81,7 @@ class _BMICalculatorState extends State<BMICalculator>
                             const Icon(
                               Icons.female,
                               size: 100.0,
-                              color: Colors.white,
+                              color: Colors.pink,
                             ),
                             const SizedBox(height: 15.0,),
                             Text(
@@ -95,7 +95,7 @@ class _BMICalculatorState extends State<BMICalculator>
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0,),
-                          color: !isMale? Colors.pink : Color.fromARGB(255, 16, 19, 35),
+                          color: !isMale? Color.fromARGB(255, 255, 136, 175) : Color.fromARGB(255, 28, 171, 0),
                         ),
                       ),
                     ),
@@ -114,7 +114,7 @@ class _BMICalculatorState extends State<BMICalculator>
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0,),
-                  color: Color.fromARGB(255, 16, 19, 35),
+                  color: Color.fromARGB(255, 28, 171, 0),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -228,7 +228,7 @@ class _BMICalculatorState extends State<BMICalculator>
                       ),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0,),
-                        color: Color.fromARGB(255, 16, 19, 35),
+                        color: Color.fromARGB(255, 28, 171, 0),
                       ),
                     ),
                   ),
@@ -286,7 +286,7 @@ class _BMICalculatorState extends State<BMICalculator>
                       ),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0,),
-                        color: Color.fromARGB(255, 16, 19, 35),
+                        color: Color.fromARGB(255, 28, 171, 0),
                       ),
                     ),
                   ),
@@ -299,7 +299,7 @@ class _BMICalculatorState extends State<BMICalculator>
           Container (
             width: double.infinity,
             height: 75.0,
-            color: Color.fromARGB(255, 230, 20, 73),
+            color: Color.fromARGB(255, 28, 171, 0),
             child: MaterialButton(
               onPressed: (){
                 double result = weight / pow(height/100, 2);

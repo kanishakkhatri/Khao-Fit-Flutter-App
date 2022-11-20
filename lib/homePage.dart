@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:khao_fit/Blogs.dart';
+import 'package:khao_fit/ContactUs.dart';
+import 'package:khao_fit/Drinks.dart';
+import 'package:khao_fit/Foods.dart';
 import 'package:khao_fit/bmiCalculator.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,12 +20,12 @@ class _HomePageState extends State<HomePage> {
     print("$height $width");
     return Center(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(10, 10, 20, 1.0),
+        backgroundColor: Color.fromARGB(255, 165, 249, 158),
         appBar: AppBar(
           elevation: 20,
           title: Text('KHAO FIT'),
           centerTitle: true,
-          backgroundColor: Color.fromRGBO(10, 15, 30, 1.0),
+          backgroundColor: Color.fromARGB(255, 8, 125, 51),
         ),
         /*------------------------------------------*/
         body: Column(
@@ -35,13 +39,13 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Color.fromRGBO(10, 15, 30, 1.0),
                   ),
                 ),
               ),
             ),
             Container(
-              height: height * 0.2,
+              height: height * 0.5,
               width: width,
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -61,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Color.fromRGBO(10, 15, 30, 1.0),
                   ),
                 ),
               ),
@@ -70,54 +74,114 @@ class _HomePageState extends State<HomePage> {
         ),
         /*------------------------------------------*/
         drawer: Drawer(
+          backgroundColor: Color.fromARGB(255, 165, 249, 158),
           child: ListView(
-            padding: const EdgeInsets.all(6.0),
+            padding: EdgeInsets.all(6.0),
             children: <Widget>[
-              // DrawerHeader(child: null,
-              // child: Text(''),
-              // decoration: BoxDecoration(
-              //   image: DecorationImage(
-              //     image: AssetImage("assets/profilebg.jpg"),
-              // fit: BoxFit.cover,
-              // ),
-              // ),
-              // ),
+              DrawerHeader(
+                child: null,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/profilebg.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Need Help ?',
                 ),
               ),
-              // ElevatedButton(
-              //   onPressed: () {},
-              //   child: Text('Food'),
-              // ),
-              ListTile(
-                title: Text('Food'),
-                tileColor: Colors.cyan,
+              SizedBox(
+                height: 10,
               ),
               ListTile(
-                title: Text('Drinks'),
-                tileColor: Colors.cyan,
-              ),
-              ListTile(
-                title: Text('BMI Calculator'),
-                tileColor: Colors.cyan,
+                title: Text(
+                  'Food',
+                  textAlign: TextAlign.center,
+                ),
+                tileColor: Color.fromARGB(255, 8, 125, 51),
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => BMICalculator(),
-                      ));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Foods(),
+                    )
+                  );
                 },
               ),
-              ListTile(
-                title: Text('Blogs'),
-                tileColor: Colors.cyan,
+              SizedBox(
+                height: 10,
               ),
               ListTile(
-                title: Text('Contact Us'),
-                tileColor: Colors.cyan,
+                title: Text(
+                  'Drinks',
+                  textAlign: TextAlign.center,
+                ),
+                tileColor: Color.fromARGB(255, 8, 125, 51),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Drinks(),
+                    )
+                  );
+                },
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                title: Text(
+                  'BMI Calculator',
+                  textAlign: TextAlign.center,
+                ),
+                tileColor: Color.fromARGB(255, 8, 125, 51),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BMICalculator(),
+                    )
+                  );
+                },
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                title: Text(
+                  'Blogs',
+                  textAlign: TextAlign.center,
+                ),
+                tileColor: Color.fromARGB(255, 8, 125, 51),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                      MaterialPageRoute(
+                        builder: (context) => Blogs()
+                      )
+                  );
+                },
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                title: Text(
+                  'Contact Us',
+                  textAlign: TextAlign.center,
+                ),
+                tileColor: Color.fromARGB(255, 8, 125, 51),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ContactUs(),
+                    )
+                  );
+                },
               ),
             ],
           ),

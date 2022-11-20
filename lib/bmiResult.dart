@@ -11,7 +11,11 @@ class BMIResultScreen extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 165, 249, 158),
+      
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 8, 125, 51),
+
         /*Manual Way to create back arrow*/
         // leading: IconButton(
         //   onPressed: (){
@@ -62,10 +66,11 @@ class BMIResultScreen extends StatelessWidget
             ),
             Text(
               "Underweight < 18.5 \n Normal weight 18.5 - 24.9 \n overweight 25 - 29.9 \n Obesity 30 or greater",
-            style: const TextStyle(
+              style: const TextStyle(
                 fontSize: 25.0,
                 fontWeight: FontWeight.w200,
               ),
+              textAlign: TextAlign.center,
             ),
           ],
         ),
