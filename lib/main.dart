@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+  const MyWidget({super.key});  
 
   @override
   State<MyWidget> createState() => _MyWidgetState();
@@ -22,4 +22,4 @@ class _MyWidgetState extends State<MyWidget> {
       debugShowCheckedModeBanner: false,
     );
   }
-}
+} 
